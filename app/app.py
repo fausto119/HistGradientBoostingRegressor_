@@ -38,8 +38,8 @@ st.markdown("""
 def cargar_modelo_y_datos():
     """Carga el modelo entrenado y el dataframe de inferencia"""
     try:
-        modelo = joblib.load('../models/model_final.joblib')
-        df_inferencia = pd.read_csv('../data/procesed/inferencia_df.csv')
+        modelo = joblib.load('models/model_final.joblib')
+        df_inferencia = pd.read_csv('data/procesed/inferencia_df.csv')
         return modelo, df_inferencia
     except Exception as e:
         st.error(f"❌ Error cargando archivos: {e}")
